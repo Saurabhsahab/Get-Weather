@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Piazzolla", serif;
+}
+
+:root {
+  --main-bg: orange;
+  --main-color: rgb(147, 224, 255);
+  --main-hv :white;
+}
+
+html {
+  font-size: 65%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  overflow : hidden;
+}
+
+.main_menu {
+  background-color: var(--main-bg);
+}
+
+.navbar {
+  color: #fff;
+  background-color: var(--main-bg);
+  padding: 10px 0;
+}
+
+.navbar li {
+  margin-left: 20 px;
+}
+
+.navbar a:hover {
+  color:var(--main-color)));
+}
+
+
+.navbar-toggler {
+  background-color: grey;
+}
+
+.navbar .navbar-brand {
+  font-size: 20px;
+  color: white;
+}
+
+.navbar .nav-link:hover {
+  color: black;
+}
+
+.navbar .navbar-brand:hover {
+  color: black;
+}
+
+.navbar .nav-link {
+  font-size: 15px;
+  color: white;
+}
+
+.fa-snowflake {
+  transition: all linear;
+  animation: rot 2s linear infinite;
+  color: var(--main-color);
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+img {
+  width: 400px;
+  height: 400px;
+}
+
+
+.main_header_left {
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main_header_right {
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main_header_left p {
+  font-size: 20px;
+}
+
+.main_header_left h1 {
+  font-size: 40 px;
+  margin: 10px 0 40px 0;
+  text-transform: capitalize;
+}
+
+.main_header_left .text_clr {
+  color: var(--main-color);
+}
+
+.main_header_left button {
+  border: none;
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px #000;
+  outline: none;
+}
+
+.main_header_left button:hover {
+  box-shadow: 0 8px 6px -6px var(--main-color);
+}
+
+footer{
+  width: 100%;
+  background-color: var(--main-bg);
+  text-align: center;
+  color: #fff;
+  line-height: 30px;
+  margin-top: auto ;
+  position: absolute;
+  bottom: 0;
+  font-size: 15px;
+}
+
+@media(max-width:768px){
+  .main_header_left{
+    height: auto;
+  }
+  .main_header_right{
+    height: auto 
+  }
+}
+
+
+/* weather page style */
+/* temp input fields style code */
+
+.temp_form {
+  width: 60%;
+  position: relative;
+  margin: 50px auto;
+}
+
+.temp_form input[type="text"] {
+  width: 100%;
+  padding: 20px 50px 20px 20px;
+  background: #1e202b;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  border-radius: 30px;
+}
+
+::placeholder {
+  color: #bfc1c8;
+}
+
+.temp_form input[type="submit"] {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: none;
+  background: orange;
+  padding: 0 30px;
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+}
+
+.temp_form input[type="submit"]:hover {
+  color: ;
+  background-color: #fff;
+}
+
+/* temp detials show here */
+
+.tempInformation {
+  width: 400px;
+  margin: auto;
+  min-height: 200px;
+  background-color: #323544;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.top_layer {
+  width: 100%;
+  height: 20%;
+  background-color: #2d303d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px 0;
+}
+
+.top_layer p {
+  color: #fff;
+  font-weight: 300;
+}
+
+.main_layer {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_layer #city_name {
+  padding: 20px 0;
+  color: #bfc1c8;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.main_layer .middle_layer {
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.main_layer .middle_layer p,
+.main_layer .middle_layer .fa {
+  font-size: 70px;
+  font-weight: 900;
+}
+
+.fa {
+  color: #009ad8;
+}
+
+sup {
+  font-size: 60px;
+  margin-top: -20px;
+}
+
+.data_hide {
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
