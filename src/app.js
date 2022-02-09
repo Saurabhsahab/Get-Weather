@@ -3,7 +3,7 @@ require("dotenv").config();
 const hbs = require("hbs");
 const path = require("path");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 const base = path.join(__dirname, "../public");
 const vp = path.join(__dirname, "../templates/views");
